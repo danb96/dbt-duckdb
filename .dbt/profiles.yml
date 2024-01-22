@@ -1,0 +1,6 @@
+duck:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: 'state/database.db'
