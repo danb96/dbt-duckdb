@@ -1,1 +1,24 @@
-select * from read_csv_auto('data/Inventory_v2_clean.csv')
+select
+    "ï»¿product.partNumber" as product_part_number,
+    "location.locationIdentifier" as location_identifier,
+    inventoryType as inventory_type,
+    quantity,
+    quantityUnits as quantity_units,
+    value,
+    valueCurrency as value_currency,
+    reservationOrders as reservation_orders,
+    daysOfSupply as days_of_supply,
+    shelfLife as shelf_life,
+    reorderLevel as reorder_level,
+    expectedLeadTime as expected_lead_time,
+    quantityUpperThreshold as quantity_upper_threshold,
+    quantityLowerThreshold as quantity_lower_threshold,
+    daysOfSupplyUpperThreshold as days_of_supply_upper_threshold,
+    daysOfSupplyLowerThreshold as days_of_supply_lower_threshold,
+    expiringThreshold as expiring_threshold,
+    plannerCode as planner_code,
+    velocityCode as velocity_code,
+    inventoryParentType as inventory_parent_type,
+    class,
+    segment
+from read_csv_auto('data/Inventory_v2_clean.csv', header = true)
